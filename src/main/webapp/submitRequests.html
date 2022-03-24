@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<script type="text/javascript">
+	function validateSubReqForm() {
+		var fname1 = document.getElementById("firstname").value;
+		var lname = document.getElementById("lastname").value;
+		var amount = document.getElementById("amount").value;
+
+		var cat = document.submitrequestform.category.options.selectedIndex;
+		var date = document.submitrequestform.date.options.selectedIndex;
+
+		if (fname.length == 0) {
+			alert("Please enter fname");
+			return false;
+		} else if (pwd.length == 0) {
+			alert("Please enter lastname");
+			return false;
+		} else if (cat == 0) {
+			alert("Please select a category");
+			return false;
+		} else if (date == 0) {
+			alert("Please select a date");
+			return false;
+		} else if (amount == 0){
+			alert("Please select amount");
+			return false;
+		}
+
+	}
+
+</script>
+<body>
+	<form class="form-style" action="subReqController"
+		onsubmit="return validateSubReqForm()" name="submitrequestform" method="post">
+		<table cellspacing="20" cellpadding="20">
+			<tr>
+				<td><label>* First Name: </label></td>
+				<td><input type="text" name="firstname" id="firstname"></td>
+			</tr>
+			<tr>
+				<td><label>* Last Name: </label></td>
+				<td><input type="text" name="lastname" id="lastname">
+			</tr>
+
+			<tr>
+				<td><label> Category: </label></td>
+				<td><select name="category" id="category">
+						<option>--select --</option>
+						<option>Travel</option>
+						<option>Dinner</option>
+						<option>Supplies</option>
+						<option>Hotel</option>
+						<option>Others</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label> Date: </label></td>
+				<td><select name="date" id="date">
+						<option>--select --</option>
+						<option>03/01/2022</option>
+						<option>03/02/2022</option>
+						<option>03/03/2022</option>
+						<option>03/04/2022</option>
+						<option>03/05/2022</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><label>* Amount: </label></td>
+				<td><input type="text" name="amount"
+					id="amount"></td>
+			</tr>
+
+			<tr>
+				<td><input type="submit" class="btn btn-primary" value="Submit"></td>
+				<td><input type="reset" class="btn btn-secondary" value="Clear"></td>
+			</tr>
+
+		</table>
+	</form>
+</body>
+</html>

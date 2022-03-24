@@ -1,0 +1,46 @@
+h1 {
+	text-align: center;
+	background-color: yellow;
+	color: red;
+	font-family: cursive;
+}
+
+h2{
+	text-align: center;
+	color: red;
+	font-family: cursive;
+}
+body {
+	/* 	background-color: aqua; */
+	background-image: url("relogo.jpg");
+}
+
+p#p1 {
+	color: green;
+}
+
+hr {
+	color: green;
+}
+.mycolor {
+	color:orange;
+	font-size: xx-large;
+}
+.important {
+	background-color: navy;
+	font-style: italic;
+}
+.notes {
+	background-color: gray;
+	font-style: oblique;
+}
+
+A:link {
+	color: green
+}
+A:visited {
+	color: purple;
+}
+A:hover {
+	color:white;
+}
